@@ -1,0 +1,29 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  height: 60px;
+  width: 100%;
+  background: $brand;
+  &__home {
+    text-decoration: none;
+    color: $white;
+  }
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    padding: 0 10px;
+    &:last-child {
+      padding-right: 0;
+    }
+    a {
+      text-decoration: none;
+      color: $white;
+    }
+  }
+}
