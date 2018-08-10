@@ -1,10 +1,11 @@
 body {
 	box-sizing: border-box;
-	*,
-	:before,
-	:after {
-		box-sizing: inherit;
-	}
+}
+
+*,
+:before,
+:after {
+	box-sizing: inherit;
 }
 
 .wrapper {
@@ -58,16 +59,11 @@ body {
 	}
 }
 
-img {
-	max-width: 100%;
-}
-
-.profile-picture {
-	margin: 0 auto 20px;
-	height: 200px;
-	width: 200px;
-	border: 1px solid $white;
-	border-radius: 50%;
-	background: url('/assets/img/profile.jpg') center center no-repeat;
-	background-size: contain;
+.flexbox {
+	display: flex;
+	flex-flow: row wrap;
+	&__column {
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
 }
