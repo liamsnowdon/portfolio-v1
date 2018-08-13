@@ -28,6 +28,7 @@ body {
   &__heading {
     position: relative;
     padding-bottom: 15px;
+	  margin-bottom: 30px;
     &:after {
       content: '';
       position: absolute;
@@ -54,9 +55,31 @@ body {
     grid-template-columns: auto auto auto auto;
   }
   &__item {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    &:hover {
+      .grid__overlay {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  &__overlay {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.8);
+    transition: all 0.5s ease-in-out;
   }
 }
 

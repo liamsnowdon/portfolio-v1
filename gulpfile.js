@@ -3,7 +3,6 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     runSequence = require('run-sequence'),
     browserSync = require('browser-sync').create(),
-    cssComb = require('gulp-csscomb'),
     sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('browserSync', function() {
@@ -22,7 +21,6 @@ gulp.task('sass', function() {
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(cssComb())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('assets/css'))
 });
