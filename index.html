@@ -10,9 +10,9 @@
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/normalize.css" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-
     <link rel="stylesheet" href="bower_components/swiper/dist/css/swiper.min.css">
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
 <body>
@@ -51,7 +51,7 @@
         <section id="skills" class="wrapper">
             <div class="content">
                 <h2 class="content__heading">Skills</h2>
-                <div class="grid grid--4">
+                <div class="grid">
                     <div class="grid__item">
                         <img src="assets/img/html5.png" />
                     </div>
@@ -96,6 +96,7 @@
                                 </div>
                                 <div class="flexbox__column">
                                     <div class="swiper-text">
+                                        <h3>Find My Doughnuts</h3>
                                         <p>
                                             Bacon ipsum dolor amet shank tongue turkey, buffalo pork loin ham turducken
                                             jerky ham hock venison burgdoggen alcatra tri-tip chuck spare ribs. Pig
@@ -116,6 +117,7 @@
                                 </div>
                                 <div class="flexbox__column">
                                     <div class="swiper-text">
+                                        <h3>browserprefixes</h3>
                                         <p>
                                             Meatball cupim frankfurter bacon shoulder corned beef. Pastrami short ribs
                                             shankle ribeye pig doner venison landjaeger frankfurter ball tip beef.
@@ -127,9 +129,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Add Arrows -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+
                 </div>
 
             </div>
@@ -143,16 +145,7 @@
     </main>
 
     <script src="bower_components/swiper/dist/js/swiper.min.js"></script>
-
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            loop: true
-        });
-    </script>
+    <script src="assets/js/script.js"></script>
 
 </body>
 
