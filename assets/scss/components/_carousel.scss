@@ -12,3 +12,12 @@
   padding: 20px;
   text-align: left;
 }
+
+@include breakpoint(medium) {
+  .swiper-image {
+    height: 90%;
+    img {
+      max-height: 100%;
+    }
+  }
+}
