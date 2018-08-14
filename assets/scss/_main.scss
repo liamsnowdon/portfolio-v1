@@ -12,7 +12,6 @@ body {
   background: $white;
   width: 100%;
   padding: 50px 20px;
-  text-align: center;
   &--alt {
     background: $brand;
     color: $white;
@@ -23,6 +22,7 @@ body {
   max-width: 1024px;
   margin: 0 auto;
   &__heading {
+    text-align: center;
     position: relative;
     padding-bottom: 15px;
     margin-bottom: 30px;
