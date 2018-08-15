@@ -12,6 +12,11 @@ body {
   background: $white;
   width: 100%;
   padding: 50px 20px;
+  &:not(.wrapper--alt) {
+    + .wrapper:not(.wrapper--alt) {
+      padding-top: 0;
+    }
+  }
   &--alt {
     background: $brand;
     color: $white;
@@ -46,10 +51,11 @@ body {
 
 .grid {
   display: grid;
-  grid-gap: 50px;
+  grid-gap: 30px;
   grid-template-columns: auto auto;
   @include breakpoint(medium) {
     grid-template-columns: auto auto auto auto;
+    grid-gap: 50px;
   }
   &__item {
     position: relative;
@@ -87,7 +93,7 @@ body {
   margin-right: -16px;
   &__column {
     padding: 0 16px;
-    flex: 0 0 100%;
+    flex: 1 1 100%;
     max-width: 100%;
     min-width: initial;
     @include breakpoint(medium) {
