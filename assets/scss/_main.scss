@@ -12,7 +12,6 @@ body {
   background: $white;
   width: 100%;
   padding: 50px 20px;
-  text-align: center;
   &--alt {
     background: $brand;
     color: $white;
@@ -23,6 +22,7 @@ body {
   max-width: 1024px;
   margin: 0 auto;
   &__heading {
+    text-align: center;
     position: relative;
     padding-bottom: 15px;
     margin-bottom: 30px;
@@ -80,15 +80,18 @@ body {
   }
 }
 
-.flexbox {
+.flexbox-row {
   display: flex;
   flex-flow: row wrap;
+  margin-left: -16px;
+  margin-right: -16px;
   &__column {
+    padding: 0 16px;
     flex: 0 0 100%;
     max-width: 100%;
+    min-width: initial;
     @include breakpoint(medium) {
-      flex: 0 0 50%;
-      max-width: 50%;
+      flex: 1 1 0;
     }
   }
 }
