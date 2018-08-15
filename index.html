@@ -148,35 +148,50 @@
         <section id="contact" class="wrapper wrapper--alt">
             <div class="content">
                 <h2 class="content__heading content__heading--alt">Contact</h2>
-                <p>
-                    Beef pancetta porchetta, beef ribs brisket shoulder pork
-                    belly frankfurter swine sirloin spare ribs kielbasa ribeye salami pork chop.
-                </p>
                 <div class="form">
+                    <p>
+                        Beef pancetta porchetta, beef ribs brisket shoulder pork
+                        belly frankfurter swine sirloin spare ribs kielbasa ribeye salami pork chop.
+                    </p>
                     <form action="">
                         <div class="flexbox-row">
                             <div class="flexbox-row__column">
-                                <div class="form-input">
-                                    <label for="fname">First Name</label>
-                                    <input id="fname" name="fname" autocomplete="given-name" type="text" required />
+                                <div class="form-input" id="fname-container">
+                                    <label for="fname" class="form-input__label">First Name *</label>
+                                    <input id="fname" class="js-field" name="fname" autocomplete="given-name" type="text" required />
+                                    <span class="form-input__error"></span>
                                 </div>
                             </div>
                             <div class="flexbox-row__column">
-                                <div class="form-input">
-                                    <label for="lname">Last Name</label>
-                                    <input id="lname" name="lname" autocomplete="family-name" type="text" required />
+                                <div class="form-input" id="lname-container">
+                                    <label for="lname" class="form-input__label">Last Name *</label>
+                                    <input id="lname" class="js-field" name="lname" autocomplete="family-name" type="text" required />
+                                    <span class="form-input__error"></span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="form-input">
-                            <label for="email">Email</label>
-                            <input id="email" name="email" autocomplete="email" type="text" required />
+                        <div class="flexbox-row">
+                            <div class="flexbox-row__column">
+                                <div class="form-input" id="email-container">
+                                    <label for="email" class="form-input__label">Email *</label>
+                                    <input id="email" class="js-field" name="_replyto" autocomplete="email" type="email" required />
+                                    <span class="form-input__error"></span>
+                                </div>
+                            </div>
+                            <div class="flexbox-row__column">
+                                <div class="form-input" id="subject-container">
+                                    <label for="subject" class="form-input__label">Subject *</label>
+                                    <input id="subject" class="js-field" name="_subject" type="text" required />
+                                    <span class="form-input__error"></span>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="form-input">
-                            <label for="message">Message</label>
-                            <textarea id="message" rows="5" required></textarea>
+                        <div class="form-input" id="message-container">
+                            <label for="message" class="form-input__label">Message *</label>
+                            <textarea id="message" class="js-field" rows="5" required></textarea>
+                            <span class="form-input__error"></span>
                         </div>
 
                         <div class="form__footer">
