@@ -1,3 +1,13 @@
+// Navigation
+var navigationMenu = document.querySelector('.js-navigation-menu');
+var navigationLinks = document.querySelector('.js-navigation-links');
+
+navigationMenu.addEventListener('click', function() {
+    navigationMenu.classList.toggle('navigation__menu--open');
+    navigationLinks.classList.toggle('navigation__links--open');
+});
+
+// Projects carousel
 var swiper = new Swiper('.swiper-container', {
     pagination: {
         el: '.swiper-pagination',
@@ -42,4 +52,3 @@ var ContactForm = {
 };
 
 ContactForm.addErrorEvents();
-
