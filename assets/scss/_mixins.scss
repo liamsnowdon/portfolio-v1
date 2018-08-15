@@ -16,8 +16,14 @@ $breakpoints: (
     }
   }
 
-  @if $breakpoint == small {
+  @elseif $breakpoint == small {
     @media screen and (min-width: 321px) {
+      @content;
+    }
+  }
+
+  @elseif $breakpoint == medium-down {
+    @media screen and (max-width: 768px) {
       @content;
     }
   }
