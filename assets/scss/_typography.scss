@@ -38,7 +38,8 @@ p {
 
 a {
   color: $brand;
-  .wrapper--alt & {
+  .wrapper--alt &,
+  .footer & {
     color: $white;
   }
 }

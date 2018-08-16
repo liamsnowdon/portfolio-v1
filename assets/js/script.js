@@ -52,3 +52,8 @@ var ContactForm = {
 };
 
 ContactForm.addErrorEvents();
+
+var copyrightYear = new Date().getFullYear();
+var copyrightEl = document.querySelector('.js-copyright-year');
+
+copyrightEl.innerText = copyrightYear;
