@@ -1,11 +1,31 @@
 // Navigation
-var navigationMenu = document.querySelector('.js-navigation-menu');
-var navigationLinks = document.querySelector('.js-navigation-links');
+var Navigation = {
+    data: {
+        scroll: new SmoothScroll('a[href*="#"]', {
+            header: '.navigation'
+        }),
+        navigationMenu: document.querySelector('.js-navigation-menu'),
+        navigationLinks: document.querySelector('.js-navigation-links'),
+        navigationItems: document.querySelectorAll('.js-navigation-item')
+    },
+    methods: {
+        addEventListeners: function() {
+            Navigation.data.navigationMenu.addEventListener('click', function() {
+                Navigation.data.navigationMenu.classList.toggle('navigation__menu--open');
+                Navigation.data.navigationLinks.classList.toggle('navigation__links--open');
+            });
 
-navigationMenu.addEventListener('click', function() {
-    navigationMenu.classList.toggle('navigation__menu--open');
-    navigationLinks.classList.toggle('navigation__links--open');
-});
+            for (var i = 0; i < Navigation.data.navigationItems.length; i++) {
+                Navigation.data.navigationItems[i].addEventListener('click', function() {
+                    Navigation.data.navigationMenu.classList.remove('navigation__menu--open');
+                    Navigation.data.navigationLinks.classList.remove('navigation__links--open');
+                })
+            }
+        }
+    }
+};
+
+Navigation.methods.addEventListeners();
 
 // Projects carousel
 var swiper = new Swiper('.swiper-container', {
