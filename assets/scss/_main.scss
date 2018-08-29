@@ -16,11 +16,6 @@ main {
   background: $white;
   width: 100%;
   padding: 50px 20px;
-  &:not(.wrapper--alt) {
-    + .wrapper:not(.wrapper--alt) {
-      padding-top: 0;
-    }
-  }
   &--alt {
     background: $brand;
     color: $white;

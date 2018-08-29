@@ -91,10 +91,16 @@
     @include breakpoint(medium) {
       padding: 0 10px;
     }
+    @include breakpoint(medium-down) {
+      &:not(:last-child) {
+        border-bottom: 1px solid $white;
+      }
+    }
     &:last-child {
       padding-right: 0;
     }
     a {
+      display: block;
       text-decoration: none;
       color: $white;
     }
