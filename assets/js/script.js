@@ -4,6 +4,7 @@ var Navigation = {
         scroll: new SmoothScroll('a[href*="#"]', {
             header: '.navigation'
         }),
+        pageOverlay: document.querySelector('.js-page-overlay'),
         navigationMenu: document.querySelector('.js-navigation-menu'),
         navigationLinks: document.querySelector('.js-navigation-links'),
         navigationItems: document.querySelectorAll('.js-navigation-item')
@@ -13,12 +14,15 @@ var Navigation = {
             Navigation.data.navigationMenu.addEventListener('click', function() {
                 Navigation.data.navigationMenu.classList.toggle('navigation__menu--open');
                 Navigation.data.navigationLinks.classList.toggle('navigation__links--open');
+                Navigation.data.pageOverlay.classList.toggle('page-overlay--active');
+
             });
 
             for (var i = 0; i < Navigation.data.navigationItems.length; i++) {
                 Navigation.data.navigationItems[i].addEventListener('click', function() {
                     Navigation.data.navigationMenu.classList.remove('navigation__menu--open');
                     Navigation.data.navigationLinks.classList.remove('navigation__links--open');
+                    Navigation.data.pageOverlay.classList.remove('page-overlay--active');
                 })
             }
         }

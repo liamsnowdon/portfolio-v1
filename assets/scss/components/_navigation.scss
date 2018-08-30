@@ -24,11 +24,15 @@
     background: $brand;
     @include breakpoint(medium-down) {
       flex-direction: column;
-      border-bottom: 1px solid $white;
+      max-height: 0;
+      overflow-y: hidden;
+      transition: all 0.3s ease-in-out;
+      .navigation__links--open & {
+        max-height: 156px;
+      }
     }
   }
   &__links {
-    display: none;
     @include breakpoint(medium-down) {
       position: absolute;
       top: 60px;
@@ -36,9 +40,6 @@
       width: 100%;
     }
     @include breakpoint(medium) {
-      display: block;
-    }
-    &--open {
       display: block;
     }
   }
@@ -92,9 +93,7 @@
       padding: 0 10px;
     }
     @include breakpoint(medium-down) {
-      &:not(:last-child) {
-        border-bottom: 1px solid $white;
-      }
+      border-bottom: 1px solid $white;
     }
     &:last-child {
       padding-right: 0;
