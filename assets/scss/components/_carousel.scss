@@ -16,3 +16,24 @@
 .swiper-pagination-bullet-active {
   background: $brand;
 }
+
+.project {
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: -16px;
+  margin-right: -16px;
+  box-sizing: border-box;
+  &__image,
+  &__text {
+    flex: 0 0 auto;
+    padding: 0 16px;
+  }
+
+  &__image {
+    width: 25%;
+  }
+
+  &__text {
+    width: 75%;
+  }
+}

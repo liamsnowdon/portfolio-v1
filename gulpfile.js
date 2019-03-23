@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     sourcemaps = require('gulp-sourcemaps');
 
-gulp.task('browserSync', function() {
+gulp.task('preview', function() {
     browserSync.init({
         server: {
             index: "index.html"
@@ -25,7 +25,7 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('assets/css'))
 });
 
-gulp.task('watch', ['browserSync', 'sass'], function() {
+gulp.task('watch', ['sass'], function() {
     gulp.watch('assets/scss/**/*.scss', ['sass']);
 });
 

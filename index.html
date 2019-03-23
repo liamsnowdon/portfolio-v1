@@ -27,7 +27,7 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,600i" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/normalize.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -40,16 +40,16 @@
 
 <body>
     <nav class="navigation" role="navigation">
-        <a class="navigation__home js-navigation-item" href="#top" data-scroll>Liam Snowdon</a>
+        <a class="navigation__link navigation__link--home js-navigation-item" href="#top" data-scroll>Liam Snowdon</a>
         <div class="navigation__menu js-navigation-menu">
             <span></span>
         </div>
         <div class="navigation__links js-navigation-links">
             <ul class="navigation__list">
-                <li class="navigation__item"><a class="js-navigation-item" href="#about" data-scroll>About</a></li>
-                <li class="navigation__item"><a class="js-navigation-item" href="#skills" data-scroll>Skills</a></li>
-                <li class="navigation__item"><a class="js-navigation-item" href="#projects" data-scroll>Projects</a></li>
-                <li class="navigation__item"><a class="js-navigation-item" href="#contact" data-scroll>Contact</a></li>
+                <li class="navigation__item"><a class="navigation__link js-navigation-item" href="#about" data-scroll>About</a></li>
+                <li class="navigation__item"><a class="navigation__link js-navigation-item" href="#skills" data-scroll>Skills</a></li>
+                <li class="navigation__item"><a class="navigation__link js-navigation-item" href="#projects" data-scroll>Projects</a></li>
+                <li class="navigation__item"><a class="navigation__link js-navigation-item" href="#contact" data-scroll>Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -61,7 +61,7 @@
             <div class="content">
                 <div class="profile-picture"></div>
                 <h1 class="txt-center">Liam Snowdon</h1>
-                <h2 class="txt-center">Front End Developer</h2>
+                <h2 class="txt-center">Junior Front End Developer</h2>
             </div>
         </section>
 
@@ -70,20 +70,16 @@
                 <h2 class="content__heading">About Me</h2>
                 <p>
                     You want to know more about me? Well... I'm a Junior Front End Developer with two years of commercial experience.
-                    I started off writing HTML emails to be sent out in weekly Marketing campaigns as well as creating and updating
-                    static pages from templates. I learned how to make use of the more powerful tools CSS provides such as Flexbox
+                    I started off writing HTML emails as well as creating and updating static pages.
+                    I learned how to make use of the more powerful tools CSS provides such as Flexbox
                     and implemented them into the projects I was collaborating on to create modern web applications.
                     I am passionate to learn new ways to create things and constantly trying to improve my skills.
                     In my spare time, I enjoy working on my own projects which you can see further below in the Projects section.
                 </p>
                 <p>
-                    On a more serious note, you may have noticed by my picture above that I like doughnuts, like... a lot.
-                    You may have also noticed that my projects have seemed to follow the same doughnut theme. Not sure how
-                    that happened, but there we go. If I'm not at my desk creating a really good looking circle in CSS, I can
-                    usually be found either in the kitchen chowing down a doughnut, or out walking to the nearest doughnut store.
-                </p>
-                <p>
-                    Oh, I'm also quite fond of a nice rum.
+                    On a more serious note, you may have noticed by my picture above that I like doughnuts.
+                    If I'm not at my desk creating a really good looking circle in CSS, I can usually be
+                    found either in the kitchen chowing down a doughnut, or out walking to the nearest doughnut store.
                 </p>
             </div>
         </section>
@@ -93,36 +89,36 @@
                 <h2 class="content__heading">Skills</h2>
                 <div class="grid">
                     <div class="grid__item">
-                        <img src="assets/img/html5.png" />
+                        <img src="assets/img/skills/html5.png" />
                         <div class="grid__overlay">HTML5</div>
                     </div>
                     <div class="grid__item">
-                        <img src="assets/img/css3.png" />
+                        <img src="assets/img/skills/css3.png" />
                         <div class="grid__overlay">CSS3</div>
                     </div>
                     <div class="grid__item">
-                        <img src="assets/img/sass.png" />
+                        <img src="assets/img/skills/sass.png" />
                         <div class="grid__overlay">Sass/SCSS</div>
                     </div>
                     <div class="grid__item">
-                        <img src="assets/img/javascript.png" />
+                        <img src="assets/img/skills/javascript.png" />
                         <div class="grid__overlay">Javascript</div>
                     </div>
 
                     <div class="grid__item">
-                        <img src="assets/img/jquery.gif" />
+                        <img src="assets/img/skills/jquery.gif" />
                         <div class="grid__overlay">jQuery</div>
                     </div>
                     <div class="grid__item">
-                        <img src="assets/img/bootstrap.png" />
+                        <img src="assets/img/skills/bootstrap.png" />
                         <div class="grid__overlay">Bootstrap</div>
                     </div>
                     <div class="grid__item">
-                        <img src="assets/img/zurb-foundation.png" />
+                        <img src="assets/img/skills/zurb-foundation.png" />
                         <div class="grid__overlay">ZURB Foundation</div>
                     </div>
                     <div class="grid__item">
-                        <img src="assets/img/gulp.png" />
+                        <img src="assets/img/skills/gulp.png" />
                         <div class="grid__overlay">Gulp</div>
                     </div>
                 </div>
@@ -131,52 +127,42 @@
 
         <section id="projects" class="wrapper">
             <div class="content">
-                <h2 class="content__heading">Projects</h2>
+                <h2 class="content__heading">Projects and Stuff</h2>
                 <!-- Slider main container -->
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="flexbox-row">
-                                <div class="flexbox-row__column">
-                                    <div class="swiper-image">
-                                        <img src="assets/img/find-my-doughnuts.png" alt="Find My Doughnuts" />
-                                    </div>
+                            <div class="project">
+                                <div class="project__image">
+                                    <img src="assets/img/projects/find-my-doughnuts.png" alt="Find My Doughnuts" />
                                 </div>
-                                <div class="flexbox-row__column">
-                                    <div class="swiper-text">
-                                        <h3><a href="https://liamsnowdon.co.uk">Find My Doughnuts</a></h3>
-                                        <p>
-                                            Using the Google Maps API, Find My Doughnuts will try and find doughnut stores
-                                            near you.
-                                        </p>
-                                        <p>
-                                            If supported, the app will use the location of your device using Geolocation to
-                                            find doughnuts at a click of a button. If not, you can search by a location
-                                            (address, landmark, etc) instead. This is a great way to plan ahead and find
-                                            stores where you are already heading!
-                                        </p>
-                                    </div>
+                                <div class="project__text">
+                                    <h3><a href="https://findmydoughnuts.liamsnowdon.co.uk" target="_blank">Find My Doughnuts</a></h3>
+                                    <p>
+                                        Using the Google Maps API, Find My Doughnuts will try and find doughnut stores
+                                        near you.
+                                    </p>
+                                    <p>
+                                        If supported, the app will use the location of your device using Geolocation to
+                                        find doughnuts at a click of a button. If not, you can search by a location
+                                        (address, landmark, etc) instead. This is a great way to plan ahead and find
+                                        stores where you are already heading!
+                                    </p>
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="flexbox-row">
-                                <div class="flexbox-row__column">
-                                    <div class="swiper-image">
-                                        <img src="assets/img/browser-prefixes.png" alt="browserprefixes" />
-                                    </div>
+                            <div class="project">
+                                <div class="project__image">
+                                    <img src="assets/img/projects/github.png" alt="Github" />
                                 </div>
-                                <div class="flexbox-row__column">
-                                    <div class="swiper-text">
-                                        <h3><a href="https://liamsnowdon.github.io/browserprefixes">browserprefixes</a></h3>
-                                        <p>
-                                            Using a cheat sheet for CSS prefixes can make frontend development that much
-                                            easier; remembering them for IE, Firefox and Chrome can be a handful. Having
-                                            a list of them within arm's reach at all times will save you time that would have otherwise
-                                            been spent tearing your hair out as to why your Flexbox system is not respecting your content
-                                            in that one browser.
-                                        </p>
-                                    </div>
+                                <div class="project__text">
+                                    <h3><a href="https://github.com/liamsnowdon" target="_blank">Github</a></h3>
+                                    <p>
+                                        I have some repositories on Github with useful tools and techniques to use such as
+                                        implementing a Gulp workflow and the benefits it would provide, as well as
+                                        how to work with breakpoints efficiently in your application using Sass/SCSS mixins.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -198,15 +184,15 @@
                         or fill out this quick form and I'll get back to you!
                     </p>
                     <form action="">
-                        <div class="flexbox-row">
-                            <div class="flexbox-row__column">
+                        <div class="row">
+                            <div class="row__column">
                                 <div class="form-input" id="fname-container">
                                     <label for="fname" class="form-input__label">First Name *</label>
                                     <input id="fname" class="js-field" name="fname" autocomplete="given-name" type="text" required />
                                     <span class="form-input__error"></span>
                                 </div>
                             </div>
-                            <div class="flexbox-row__column">
+                            <div class="row__column">
                                 <div class="form-input" id="lname-container">
                                     <label for="lname" class="form-input__label">Last Name *</label>
                                     <input id="lname" class="js-field" name="lname" autocomplete="family-name" type="text" required />
@@ -215,15 +201,15 @@
                             </div>
                         </div>
 
-                        <div class="flexbox-row">
-                            <div class="flexbox-row__column">
+                        <div class="row">
+                            <div class="row__column">
                                 <div class="form-input" id="email-container">
                                     <label for="email" class="form-input__label">Email *</label>
                                     <input id="email" class="js-field" name="_replyto" autocomplete="email" type="email" required />
                                     <span class="form-input__error"></span>
                                 </div>
                             </div>
-                            <div class="flexbox-row__column">
+                            <div class="row__column">
                                 <div class="form-input" id="subject-container">
                                     <label for="subject" class="form-input__label">Subject *</label>
                                     <input id="subject" class="js-field" name="_subject" type="text" required />
@@ -252,7 +238,7 @@
             <a href="https://www.linkedin.com/in/liam-snowdon"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/liamsnowdon"><i class="fab fa-github-square"></i></a>
         </div>
-        <span>Copyright &copy; <span class="js-copyright-year"></span> Liam Snowdon</span>
+        <span>Copyright &copy; 2018 - <span class="js-copyright-year"></span> Liam Snowdon</span>
     </footer>
 
     <script src="bower_components/swiper/dist/js/swiper.min.js"></script>
