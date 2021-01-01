@@ -1,0 +1,28 @@
+.l-content {
+  max-width: 1440px;
+  margin: 0 auto;
+
+  &__heading {
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+
+    &::marker {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 2px;
+      width: 20px;
+      background: black;
+    }
+
+    &--alt {
+      &::after {
+        background: white;
+      }
+    }
+  }
+}

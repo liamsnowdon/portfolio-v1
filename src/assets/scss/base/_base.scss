@@ -1,0 +1,17 @@
+body {
+  position: relative;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+main {
+  padding-top: 60px;
+}
+
+img {
+  max-width: 100%;
+}

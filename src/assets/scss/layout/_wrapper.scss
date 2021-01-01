@@ -1,0 +1,10 @@
+.l-wrapper {
+  background: white;
+  width: 100%;
+  padding: 40px 20px;
+
+  &--alt {
+    background: $shakespeare;
+    color: white;
+  }
+}

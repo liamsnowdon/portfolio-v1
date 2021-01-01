@@ -1,0 +1,58 @@
+.form {
+  @include breakpoint(medium) {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  &__intro {
+    margin-bottom: 20px;
+  }
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.form-input {
+  margin: 0 0 20px 0;
+  &__label {
+    display: block;
+    width: 100%;
+    margin: 0 0 5px 0;
+  }
+  &__error {
+    margin-top: 5px;
+    font-size: 0.8rem;
+  }
+}
+
+[type="text"],
+[type="password"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="month"],
+[type="week"],
+[type="email"],
+[type="number"],
+[type="search"],
+[type="tel"],
+[type="time"],
+[type="url"],
+[type="color"],
+textarea,
+select {
+  display: block;
+  background: white;
+  border: 1px solid black;
+  border-radius: 0;
+  font-size: 1rem;
+  margin: 0;
+  width: 100%;
+  padding: 10px;
+  height: 40px;
+}
+
+textarea {
+  height: 80px;
+  resize: vertical;
+}

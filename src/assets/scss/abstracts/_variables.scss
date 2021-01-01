@@ -1,0 +1,25 @@
+// Table of Contents
+// 1. Globals
+// 1. Coluors
+// 2. Breakpoints
+
+// 1. Globals
+// --------------
+$global-width: 1360px;
+
+// 2. Colours
+// --------------
+$shakespeare: #4096cf;
+
+// 3. Breakpoints
+// --------------
+$breakpoints: (
+        small: 0,
+        small-p: 320px,
+        small-l: 480px,
+        medium: 768px,
+        large: 1024px,
+        xlarge: 1200px,
+        xxlarge: 1440px,
+        xxxlarge: 1900px,
+);

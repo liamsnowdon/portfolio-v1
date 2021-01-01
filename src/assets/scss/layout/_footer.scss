@@ -1,0 +1,15 @@
+.l-footer {
+  background: $shakespeare;
+  padding: 0 0 20px;
+  text-align: center;
+  color: white;
+
+  &__icons {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    
+    > a:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+}

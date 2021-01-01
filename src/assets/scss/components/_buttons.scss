@@ -1,0 +1,16 @@
+.button {
+  display: inline-block;
+  -webkit-appearance: none;
+  cursor: pointer;
+  background: white;
+  border: 1px solid black;
+  border-radius: 0;
+  color: $shakespeare;
+  font-size: 1rem;
+  font-weight: bold;
+  overflow: hidden;
+  position: relative;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color .25s ease-out, color .25s ease-out;
+}

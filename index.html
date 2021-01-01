@@ -5,71 +5,54 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="keywords" content="Liam Snowdon, Portfolio, Front End, Developer, Junior, HTML, CSS, Javascript, SASS, LESS" />
-    <meta name="description" content="Portfolio website for a Junior Front End Developer with 2 years commercial experience working with HTML, CSS, Javascript and more." />
-    <title>Liam Snowdon - Junior Front End Developer Portfolio</title>
-
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="keywords" content="Liam Snowdon, Portfolio, Front End, Developer, HTML, CSS, Javascript, SASS, LESS" />
+    <meta name="description" content="Portfolio website for a Front End Developer with 2 years commercial experience working with HTML, CSS, Javascript and more." />
+    <title>Liam Snowdon - Front End Developer Portfolio</title>
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,600i" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/normalize.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-          integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-          crossorigin="anonymous">
-    <link rel="stylesheet" href="bower_components/swiper/dist/css/swiper.min.css" />
+    <link 
+        rel="stylesheet" 
+        href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous"
+    >
 
     <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
 <body>
-    <nav class="navigation" role="navigation">
-        <a class="navigation__link navigation__link--home js-navigation-item" href="#top" data-scroll>Liam Snowdon</a>
-        <div class="navigation__menu js-navigation-menu">
+    <nav class="l-navigation" role="navigation">
+        <a class="l-navigation__link l-navigation__link--home js-navigation-item" href="#top" data-scroll>Liam Snowdon</a>
+        <div class="l-navigation__menu js-navigation-menu">
             <span></span>
         </div>
-        <div class="navigation__links js-navigation-links">
-            <ul class="navigation__list">
-                <li class="navigation__item"><a class="navigation__link js-navigation-item" href="#about" data-scroll>About</a></li>
-                <li class="navigation__item"><a class="navigation__link js-navigation-item" href="#skills" data-scroll>Skills</a></li>
-                <li class="navigation__item"><a class="navigation__link js-navigation-item" href="#projects" data-scroll>Projects</a></li>
-                <li class="navigation__item"><a class="navigation__link js-navigation-item" href="#contact" data-scroll>Contact</a></li>
+        <div class="l-navigation__links js-navigation-links">
+            <ul class="l-navigation__list">
+                <li class="l-navigation__item"><a class="l-navigation__link js-navigation-item" href="#about" data-scroll>About</a></li>
+                <li class="l-navigation__item"><a class="l-navigation__link js-navigation-item" href="#skills" data-scroll>Skills</a></li>
+                <li class="l-navigation__item"><a class="l-navigation__link js-navigation-item" href="#projects" data-scroll>Projects</a></li>
+                <li class="l-navigation__item"><a class="l-navigation__link js-navigation-item" href="#contact" data-scroll>Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <div class="page-overlay js-page-overlay"></div>
 
-    <main id="top"  role="main">
-        <section class="wrapper wrapper--alt">
-            <div class="content">
+    <main id="top" role="main">
+        <section class="l-wrapper l-wrapper--alt">
+            <div class="l-content">
                 <div class="profile-picture"></div>
                 <h1 class="txt-center">Liam Snowdon</h1>
-                <h2 class="txt-center">Junior Front End Developer</h2>
+                <h2 class="txt-center">Front End Developer</h2>
             </div>
         </section>
 
-        <section id="about" class="wrapper">
-            <div class="content">
-                <h2 class="content__heading">About Me</h2>
+        <section id="about" class="l-wrapper">
+            <div class="l-content">
+                <h2 class="l-content__heading">About Me</h2>
                 <p>
-                    You want to know more about me? Well... I'm a Junior Front End Developer with two years of commercial experience.
+                    You want to know more about me? Well... I'm a Front End Developer with two years of commercial experience.
                     I started off writing HTML emails as well as creating and updating static pages.
                     I learned how to make use of the more powerful tools CSS provides such as Flexbox
                     and implemented them into the projects I was collaborating on to create modern web applications.
@@ -84,167 +67,105 @@
             </div>
         </section>
 
-        <section id="skills" class="wrapper">
-            <div class="content">
-                <h2 class="content__heading">Skills</h2>
-                <div class="grid">
-                    <div class="grid__item">
+        <section id="skills" class="l-wrapper">
+            <div class="l-content">
+                <h2 class="l-content__heading">Skills</h2>
+                <div class="l-grid">
+                    <div class="l-grid__item">
                         <img src="assets/img/skills/html5.png" />
-                        <div class="grid__overlay">HTML5</div>
+                        <div class="l-grid__overlay">HTML5</div>
                     </div>
-                    <div class="grid__item">
+                    <div class="l-grid__item">
                         <img src="assets/img/skills/css3.png" />
-                        <div class="grid__overlay">CSS3</div>
+                        <div class="l-grid__overlay">CSS3</div>
                     </div>
-                    <div class="grid__item">
+                    <div class="l-grid__item">
                         <img src="assets/img/skills/sass.png" />
-                        <div class="grid__overlay">Sass/SCSS</div>
+                        <div class="l-grid__overlay">Sass/SCSS</div>
                     </div>
-                    <div class="grid__item">
+                    <div class="l-grid__item">
                         <img src="assets/img/skills/javascript.png" />
-                        <div class="grid__overlay">Javascript</div>
+                        <div class="l-grid__overlay">Javascript</div>
                     </div>
 
-                    <div class="grid__item">
+                    <div class="l-grid__item">
                         <img src="assets/img/skills/jquery.gif" />
-                        <div class="grid__overlay">jQuery</div>
+                        <div class="l-grid__overlay">jQuery</div>
                     </div>
-                    <div class="grid__item">
+                    <div class="l-grid__item">
                         <img src="assets/img/skills/bootstrap.png" />
-                        <div class="grid__overlay">Bootstrap</div>
+                        <div class="l-grid__overlay">Bootstrap</div>
                     </div>
-                    <div class="grid__item">
+                    <div class="l-grid__item">
                         <img src="assets/img/skills/zurb-foundation.png" />
-                        <div class="grid__overlay">ZURB Foundation</div>
+                        <div class="l-grid__overlay">ZURB Foundation</div>
                     </div>
-                    <div class="grid__item">
+                    <div class="l-grid__item">
                         <img src="assets/img/skills/gulp.png" />
-                        <div class="grid__overlay">Gulp</div>
+                        <div class="l-grid__overlay">Gulp</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="wrapper">
-            <div class="content">
-                <h2 class="content__heading">Projects and Stuff</h2>
-                <!-- Slider main container -->
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="project">
-                                <div class="project__image">
-                                    <img src="assets/img/projects/find-my-doughnuts.png" alt="Find My Doughnuts" />
-                                </div>
-                                <div class="project__text">
-                                    <h3><a href="https://findmydoughnuts.liamsnowdon.co.uk" target="_blank">Find My Doughnuts</a></h3>
-                                    <p>
-                                        Using the Google Maps API, Find My Doughnuts will try and find doughnut stores
-                                        near you.
-                                    </p>
-                                    <p>
-                                        If supported, the app will use the location of your device using Geolocation to
-                                        find doughnuts at a click of a button. If not, you can search by a location
-                                        (address, landmark, etc) instead. This is a great way to plan ahead and find
-                                        stores where you are already heading!
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="project">
-                                <div class="project__image">
-                                    <img src="assets/img/projects/github.png" alt="Github" />
-                                </div>
-                                <div class="project__text">
-                                    <h3><a href="https://github.com/liamsnowdon" target="_blank">Github</a></h3>
-                                    <p>
-                                        I have some repositories on Github with useful tools and techniques to use such as
-                                        implementing a Gulp workflow and the benefits it would provide, as well as
-                                        how to work with breakpoints efficiently in your application using Sass/SCSS mixins.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
+        <section id="projects" class="l-wrapper">
+            <div class="l-content">
+                <h2 class="l-content__heading">Projects and Stuff</h2>
 
+                <div class="project">
+                    <div class="project__image">
+                        <img src="assets/img/projects/find-my-doughnuts.png" alt="Find My Doughnuts" />
+                    </div>
+                    <div class="project__text">
+                        <h3><a href="https://findmydoughnuts.liamsnowdon.co.uk" target="_blank">Find My Doughnuts</a></h3>
+                        <p>
+                            Using the Google Maps API, Find My Doughnuts will try and find doughnut stores
+                            near you.
+                        </p>
+                        <p>
+                            If supported, the app will use the location of your device using Geolocation to
+                            find doughnuts at a click of a button. If not, you can search by a location
+                            (address, landmark, etc) instead. This is a great way to plan ahead and find
+                            stores where you are already heading!
+                        </p>
+                    </div>
                 </div>
 
+                <div class="project">
+                    <div class="project__image">
+                        <img src="assets/img/projects/github.png" alt="Github" />
+                    </div>
+                    <div class="project__text">
+                        <h3><a href="https://github.com/liamsnowdon" target="_blank">Github</a></h3>
+                        <p>
+                            I have some repositories on Github with useful tools and techniques to use such as
+                            implementing a Gulp workflow and the benefits it would provide, as well as
+                            how to work with breakpoints efficiently in your application using Sass/SCSS mixins.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="contact" class="wrapper wrapper--alt">
-            <div class="content">
-                <h2 class="content__heading content__heading--alt">Contact</h2>
-                <div class="form">
-                    <p class="form__intro">
-                        Want to get in touch? Send me an email at <a href="mailto:snowdon.liam@gmail.com">snowdon.liam@gmail.com</a>
-                        or fill out this quick form and I'll get back to you!
-                    </p>
-                    <form action="">
-                        <div class="row">
-                            <div class="row__column">
-                                <div class="form-input" id="fname-container">
-                                    <label for="fname" class="form-input__label">First Name *</label>
-                                    <input id="fname" class="js-field" name="fname" autocomplete="given-name" type="text" required />
-                                    <span class="form-input__error"></span>
-                                </div>
-                            </div>
-                            <div class="row__column">
-                                <div class="form-input" id="lname-container">
-                                    <label for="lname" class="form-input__label">Last Name *</label>
-                                    <input id="lname" class="js-field" name="lname" autocomplete="family-name" type="text" required />
-                                    <span class="form-input__error"></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="row__column">
-                                <div class="form-input" id="email-container">
-                                    <label for="email" class="form-input__label">Email *</label>
-                                    <input id="email" class="js-field" name="_replyto" autocomplete="email" type="email" required />
-                                    <span class="form-input__error"></span>
-                                </div>
-                            </div>
-                            <div class="row__column">
-                                <div class="form-input" id="subject-container">
-                                    <label for="subject" class="form-input__label">Subject *</label>
-                                    <input id="subject" class="js-field" name="_subject" type="text" required />
-                                    <span class="form-input__error"></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-input" id="message-container">
-                            <label for="message" class="form-input__label">Message *</label>
-                            <textarea id="message" class="js-field" rows="5" required></textarea>
-                            <span class="form-input__error"></span>
-                        </div>
-
-                        <div class="form__footer">
-                            <button class="button" type="submit">Send</button>
-                        </div>
-                    </form>
-                </div>
+        <section id="contact" class="l-wrapper l-wrapper--alt">
+            <div class="l-content">
+                <h2 class="l-content__heading l-content__heading--alt">Contact</h2>
+                <p>
+                    Want to get in touch? Send me an email at <a href="mailto:snowdon.liam@gmail.com">snowdon.liam@gmail.com</a>
+                    or fill out this quick form and I'll get back to you!
+                </p>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer__icons">
+    <footer class="l-footer">
+        <div class="l-footer__icons">
             <a href="https://www.linkedin.com/in/liam-snowdon"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/liamsnowdon"><i class="fab fa-github-square"></i></a>
         </div>
-        <span>Copyright &copy; 2018 - <span class="js-copyright-year"></span> Liam Snowdon</span>
     </footer>
 
-    <script src="bower_components/swiper/dist/js/swiper.min.js"></script>
-    <script src="assets/js/smooth-scroll.polyfills.min.js"></script>
-    <script src="assets/js/script.js"></script>
-
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
