@@ -1,4 +1,20 @@
-# Liam Snowdon Portfolio
+# Liam Snowdon's Portfolio
 
-Personal portfolio website to show my projects, experience, skills and how to contact. 
+## Dev Setup
 
+```bash
+# install dependencies
+npm install
+
+# compile Sass
+npm run dev
+
+# serve via browsersync in development mode
+npm run serve
+
+# build for production
+npm run build
+
+# serve via browsersync in production mode
+npm run serveProd
+```
