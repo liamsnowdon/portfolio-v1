@@ -10,7 +10,6 @@
   height: 60px;
   width: 100%;
   background: $shakespeare;
-  border-bottom: 1px solid white;
 
   &__list {
     display: flex;
@@ -97,14 +96,10 @@
   }
 
   &__item {
-    padding: 10px;
+    padding: 10px 20px;
 
     @include breakpoint(medium) {
       padding: 0 10px;
-    }
-
-    @include breakpoint(medium, down) {
-      border-bottom: 1px solid white;
     }
 
     &:last-child {
@@ -115,6 +110,10 @@
       display: block;
       text-decoration: none;
       color: white;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -123,6 +122,10 @@
       font-size: 1.4rem;
       text-decoration: none;
       color: white;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
