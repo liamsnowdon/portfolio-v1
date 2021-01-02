@@ -11,28 +11,21 @@
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,600i" rel="stylesheet">
 
-    <link 
-        rel="stylesheet" 
-        href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-        crossorigin="anonymous"
-    >
-
+    <script src="https://unpkg.com/scrollreveal@4.0.7/dist/scrollreveal.js"></script>
     <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
 <body>
-    <nav class="l-navigation" role="navigation">
-        <a class="l-navigation__link l-navigation__link--home js-navigation-item" href="#top" data-scroll>Liam Snowdon</a>
+    <nav class="l-navigation js-navigation" role="navigation">
+        <a class="l-navigation__link l-navigation__link--home js-navigation-item" href="#top">Liam Snowdon</a>
         <div class="l-navigation__menu js-navigation-menu">
             <span></span>
         </div>
         <div class="l-navigation__links js-navigation-links">
             <ul class="l-navigation__list">
-                <li class="l-navigation__item"><a class="l-navigation__link js-navigation-item" href="#about" data-scroll>About</a></li>
-                <li class="l-navigation__item"><a class="l-navigation__link js-navigation-item" href="#skills" data-scroll>Skills</a></li>
-                <li class="l-navigation__item"><a class="l-navigation__link js-navigation-item" href="#projects" data-scroll>Projects</a></li>
-                <li class="l-navigation__item"><a class="l-navigation__link js-navigation-item" href="#contact" data-scroll>Contact</a></li>
+                <li class="l-navigation__item"><a class="l-navigation__link js-navigation-item" href="#skills">Skills</a></li>
+                <li class="l-navigation__item"><a class="l-navigation__link js-navigation-item" href="#projects">Projects</a></li>
+                <li class="l-navigation__item"><a class="l-navigation__link js-navigation-item" href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -40,130 +33,261 @@
     <div class="page-overlay js-page-overlay"></div>
 
     <main id="top" role="main">
-        <section class="l-wrapper l-wrapper--alt">
+        <section class="l-wrapper l-wrapper--blue l-wrapper--main">
             <div class="l-content">
-                <div class="profile-picture"></div>
-                <h1 class="txt-center">Liam Snowdon</h1>
-                <h2 class="txt-center">Front End Developer</h2>
-            </div>
-        </section>
+                <div class="l-grid">
+                    <div class="l-grid__row">
+                        <div class="l-grid__column l-grid__column--12 l-grid__column--medium-6">
+                            <div class="profile-picture load-hidden js-profile-picture">
+                                <img src="/assets/images/profile.jpg" alt="Liam Snowdon" />
+                            </div>
+                        </div>
+                        <div class="l-grid__column l-grid__column--12 l-grid__column--medium-6">
+                            <div class="profile-text">
+                                <h1 class="load-hidden js-profile-text">Liam Snowdon</h1>
+                                <h2 class="load-hidden js-profile-text">Front End Developer</h2>    
 
-        <section id="about" class="l-wrapper">
-            <div class="l-content">
-                <h2 class="l-content__heading">About Me</h2>
-                <p>
-                    You want to know more about me? Well... I'm a Front End Developer with two years of commercial experience.
-                    I started off writing HTML emails as well as creating and updating static pages.
-                    I learned how to make use of the more powerful tools CSS provides such as Flexbox
-                    and implemented them into the projects I was collaborating on to create modern web applications.
-                    I am passionate to learn new ways to create things and constantly trying to improve my skills.
-                    In my spare time, I enjoy working on my own projects which you can see further below in the Projects section.
-                </p>
-                <p>
-                    On a more serious note, you may have noticed by my picture above that I like doughnuts.
-                    If I'm not at my desk creating a really good looking circle in CSS, I can usually be
-                    found either in the kitchen chowing down a doughnut, or out walking to the nearest doughnut store.
-                </p>
+                                <div class="profile-icons">
+                                    <a class="load-hidden js-profile-icon" href="https://www.linkedin.com/in/liam-snowdon" target="_blank">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+
+                                    <a class="load-hidden js-profile-icon" href="https://github.com/liamsnowdon" target="_blank">
+                                        <i class="fab fa-github-square"></i>
+                                    </a>
+
+                                    <a class="profile-icons--svg load-hidden js-profile-icon" href="https://blog.liamsnowdon.co.uk" target="_blank">
+                                        <img src="/assets/images/blog-icon-white.svg" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="skills" class="l-wrapper">
             <div class="l-content">
-                <h2 class="l-content__heading">Skills</h2>
+                <div class="l-content__title">
+                    <h2>Skills</h2>
+                    <p>
+                        Experience with building web applications including JavaScript-driven SPAs.
+                        Proficient with HTML5, CSS3 and JavaScript while using build tools like Webpack 
+                        and Gulp to utilise modern development features. Also have experience with JavaScript frameworks/libraries
+                        such as Vue.js, AngularJS, Bootstrap, Foundation, etc.
+                    </p>
+                </div>
+                
                 <div class="l-grid">
-                    <div class="l-grid__item">
-                        <img src="assets/img/skills/html5.png" />
-                        <div class="l-grid__overlay">HTML5</div>
-                    </div>
-                    <div class="l-grid__item">
-                        <img src="assets/img/skills/css3.png" />
-                        <div class="l-grid__overlay">CSS3</div>
-                    </div>
-                    <div class="l-grid__item">
-                        <img src="assets/img/skills/sass.png" />
-                        <div class="l-grid__overlay">Sass/SCSS</div>
-                    </div>
-                    <div class="l-grid__item">
-                        <img src="assets/img/skills/javascript.png" />
-                        <div class="l-grid__overlay">Javascript</div>
-                    </div>
-
-                    <div class="l-grid__item">
-                        <img src="assets/img/skills/jquery.gif" />
-                        <div class="l-grid__overlay">jQuery</div>
-                    </div>
-                    <div class="l-grid__item">
-                        <img src="assets/img/skills/bootstrap.png" />
-                        <div class="l-grid__overlay">Bootstrap</div>
-                    </div>
-                    <div class="l-grid__item">
-                        <img src="assets/img/skills/zurb-foundation.png" />
-                        <div class="l-grid__overlay">ZURB Foundation</div>
-                    </div>
-                    <div class="l-grid__item">
-                        <img src="assets/img/skills/gulp.png" />
-                        <div class="l-grid__overlay">Gulp</div>
+                    <div class="l-grid__row l-grid__row--column-margins">
+                        <div class="skill-cont l-grid__column l-grid__column--6 l-grid__column--medium-4 l-grid__column--large-3">
+                            <div class="skill load-hidden js-skill">
+                                <div class="skill__icon">
+                                    <i class="fab fa-html5"></i>
+                                </div>
+                                <div class="skill__name">
+                                    <h6>HTML5</h6>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="skill-cont l-grid__column l-grid__column--6 l-grid__column--medium-4 l-grid__column--large-3">
+                            <div class="skill load-hidden js-skill">
+                                <div class="skill__icon">
+                                    <i class="fab fa-css3-alt"></i>
+                                </div>
+                                <div class="skill__name">
+                                    <h6>CSS3</h6>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="skill-cont l-grid__column l-grid__column--6 l-grid__column--medium-4 l-grid__column--large-3">
+                            <div class="skill load-hidden js-skill">
+                                <div class="skill__icon">
+                                    <i class="fab fa-js"></i>
+                                </div>
+                                <div class="skill__name">
+                                    <h6>JavaScript (ES6+)</h6>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="skill-cont l-grid__column l-grid__column--6 l-grid__column--medium-4 l-grid__column--large-3">
+                            <div class="skill load-hidden js-skill">
+                                <div class="skill__icon">
+                                    <i class="fab fa-vuejs"></i>
+                                </div>
+                                <div class="skill__name">
+                                    <h6>Vue.js</h6>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="skill-cont l-grid__column l-grid__column--6 l-grid__column--medium-4 l-grid__column--large-3">
+                            <div class="skill load-hidden js-skill">
+                                <div class="skill__icon">
+                                    <i class="fab fa-angular"></i>
+                                </div>
+                                <div class="skill__name">
+                                    <h6>AngularJS</h6>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="skill-cont l-grid__column l-grid__column--6 l-grid__column--medium-4 l-grid__column--large-3">
+                            <div class="skill load-hidden js-skill">
+                                <div class="skill__icon">
+                                    <i class="fab fa-bootstrap"></i>
+                                </div>
+                                <div class="skill__name">
+                                    <h6>Bootstrap</h6>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="skill-cont l-grid__column l-grid__column--6 l-grid__column--medium-4 l-grid__column--large-3">
+                            <div class="skill load-hidden js-skill">
+                                <div class="skill__icon">
+                                    <i class="fab fa-gulp"></i>
+                                </div>
+                                <div class="skill__name">
+                                    <h6>Gulp</h6>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="l-wrapper">
+        <section id="projects" class="l-wrapper l-wrapper--grey">
             <div class="l-content">
-                <h2 class="l-content__heading">Projects and Stuff</h2>
-
-                <div class="project">
-                    <div class="project__image">
-                        <img src="assets/img/projects/find-my-doughnuts.png" alt="Find My Doughnuts" />
-                    </div>
-                    <div class="project__text">
-                        <h3><a href="https://findmydoughnuts.liamsnowdon.co.uk" target="_blank">Find My Doughnuts</a></h3>
-                        <p>
-                            Using the Google Maps API, Find My Doughnuts will try and find doughnut stores
-                            near you.
-                        </p>
-                        <p>
-                            If supported, the app will use the location of your device using Geolocation to
-                            find doughnuts at a click of a button. If not, you can search by a location
-                            (address, landmark, etc) instead. This is a great way to plan ahead and find
-                            stores where you are already heading!
-                        </p>
-                    </div>
+                <div class="l-content__title">
+                    <h2>Projects and Stuff</h2>
                 </div>
-
-                <div class="project">
-                    <div class="project__image">
-                        <img src="assets/img/projects/github.png" alt="Github" />
+                
+                <div class="projects">
+                    <div class="project js-project-left">
+                        <div class="project__image">
+                            <img src="assets/images/projects/blog.svg" alt="Blog" />
+                        </div>
+                        <div class="project__text">
+                            <h3 class="project__heading">
+                                <a href="https://blog.liamsnowdon.co.uk" target="_blank">Blog</a>
+                                <img src="assets/images/projects/blog.svg" alt="Blog" />
+                            </h3>
+                            <p>
+                                I post everything front end on my blog, from tips for responsive design to full guides on creating a workflow that
+                                suits your development needs. My posts are categorised and tagged with keywords to make it easy to find exactly what you're looking for.
+                            </p>
+                            <p>
+                                From a development perspective, it's built on the Nunjucks templating engine and is precompiled with Gulp.js. The majority of pages
+                                are built automatically from JSON which is generated with a TinyMCE editor app.
+                            </p>
+                        </div>
                     </div>
-                    <div class="project__text">
-                        <h3><a href="https://github.com/liamsnowdon" target="_blank">Github</a></h3>
-                        <p>
-                            I have some repositories on Github with useful tools and techniques to use such as
-                            implementing a Gulp workflow and the benefits it would provide, as well as
-                            how to work with breakpoints efficiently in your application using Sass/SCSS mixins.
-                        </p>
+    
+                    <div class="project js-project-right">
+                        <div class="project__image">
+                            <img src="assets/images/projects/nookapp.png" alt="NookApp" />
+                        </div>
+                        <div class="project__text">
+                            <h3 class="project__heading">
+                                <a href="https://thenookapp.com" target="_blank">NookApp</a>
+                                <img src="assets/images/projects/nookapp.png" alt="NookApp" />
+                            </h3>
+                            <p>
+                                A hub of interactive apps to use alongside the Animal Crossing: New Horizons game on Nintendo Switch, including a
+                                Critterpedia, fossil encyclopedia and a daily checklist.
+                            </p>
+                            <p>
+                                The app is created using Vue.js as the framework with Vuex as the state management pattern. The app is compiled and
+                                bundled using Webpack with the vue-cli configuration.
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="project js-project-left">
+                        <div class="project__image">
+                            <img src="assets/images/projects/find-my-doughnuts.png" alt="Find My Doughnuts" />
+                        </div>
+                        <div class="project__text">
+                            <h3 class="project__heading">
+                                <a href="https://findmydoughnuts.liamsnowdon.co.uk" target="_blank">Find My Doughnuts</a>
+                                <img src="assets/images/projects/find-my-doughnuts.png" alt="Find My Doughnuts" />
+                            </h3>
+                            <p>
+                                Using the Google Maps API, Find My Doughnuts will try and find doughnut stores
+                                near you using the device's geolocation.
+                            </p>
+                            <p>
+                                This was the first app I made, and serves a good reminder of my progress in web development.
+                                Plus, I don't have the heart to change any of it because it's so funny as a concept :)
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="project js-project-right">
+                        <div class="project__image">
+                            <img src="assets/images/projects/github.png" alt="Github" />
+                        </div>
+                        <div class="project__text">
+                            <h3 class="project__heading">
+                                <a href="https://github.com/liamsnowdon" target="_blank">Github</a>
+                                <img src="assets/images/projects/github.png" alt="Github" />
+                            </h3>
+                            <p>
+                                I have some repositories on Github with useful tools and techniques to use such as
+                                implementing a Gulp workflow and the benefits it would provide, as well as
+                                how to work with breakpoints efficiently in your application using Sass/SCSS mixins.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="l-wrapper l-wrapper--alt">
+        <section id="contact" class="l-wrapper l-wrapper--blue pb-0">
             <div class="l-content">
-                <h2 class="l-content__heading l-content__heading--alt">Contact</h2>
-                <p>
-                    Want to get in touch? Send me an email at <a href="mailto:snowdon.liam@gmail.com">snowdon.liam@gmail.com</a>
-                    or fill out this quick form and I'll get back to you!
-                </p>
+                <div class="l-content__title l-content__title--alt">
+                    <h2>Contact</h2>    
+
+                    <p>
+                        Want to get in touch? Send me an email at <a href="mailto:snowdon.liam@gmail.com?subject=Hi, Liam! I found your email from your portfolio site.">snowdon.liam@gmail.com</a>.
+                    </p>
+                </div>
             </div>
         </section>
+
+        <footer class="l-footer">
+            <div class="l-footer__main">
+                <nav class="l-footer__links">
+                    <a href="#skills" class="l-footer__link">
+                        Skills
+                    </a>
+                    <a href="#projects" class="l-footer__link">
+                        Projects
+                    </a>
+                </nav>
+                <div class="l-footer__social">
+                    <h6>Liam Snowdon</h6>
+                    <div class="l-footer__social-links">
+                        <a href="https://www.linkedin.com/in/liam-snowdon/" target="_blank" class="l-footer__social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/liamsnowdon" target="_blank" class="l-footer__social-link">
+                            <i class="fab fa-github-square"></i>
+                        </a>
+                        <a href="https://blog.liamsnowdon.co.uk" target="_blank" class="l-footer__social-link l-footer__social-link--svg">
+                            <img src="/assets/images/blog-icon-white.svg" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </main>
-
-    <footer class="l-footer">
-        <div class="l-footer__icons">
-            <a href="https://www.linkedin.com/in/liam-snowdon"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/liamsnowdon"><i class="fab fa-github-square"></i></a>
-        </div>
-    </footer>
 
     <script src="assets/js/main.js"></script>
 </body>

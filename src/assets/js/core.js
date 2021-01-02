@@ -1,8 +1,25 @@
 (function () {
+    ScrollReveal({
+        duration: 1200,
+        delay: 100,
+        viewOffset: {
+            top: 60
+        }
+    });
+
+    ScrollReveal().reveal('.js-profile-text', { interval: 200, distance: '100px', origin: 'right' });
+    ScrollReveal().reveal('.js-profile-icon', { delay: 400, interval: 200, distance: '50px', origin: 'bottom' });
+    ScrollReveal().reveal('.js-profile-picture', { delay: 600, distance: '50px', origin: 'bottom' });
+
+    ScrollReveal().reveal('.js-skill', { interval: 200, distance: '50px', origin: 'top' });
+    ScrollReveal().reveal('.js-project-left', { delay: 400, distance: '200px', origin: 'left' });
+    ScrollReveal().reveal('.js-project-right', { delay: 400, distance: '200px', origin: 'right' });
+    
+
     var Navigation = {
         initialise: function () {
             this.scroll = new SmoothScroll('a[href*="#"]', {
-                header: '.navigation'
+                header: '.js-navigation'
             }),
             this.pageOverlay = document.querySelector('.js-page-overlay'),
             this.navigationMenu = document.querySelector('.js-navigation-menu'),
@@ -29,15 +46,15 @@
         },
     
         toggleNavigation: function () {
-            this.navigationMenu.classList.toggle('navigation__menu--open');
-            this.navigationLinks.classList.toggle('navigation__links--open');
-            this.pageOverlay.classList.toggle('page-overlay--active');
+            this.navigationMenu.classList.toggle('is-active');
+            this.navigationLinks.classList.toggle('is-active');
+            this.pageOverlay.classList.toggle('is-active');
         },
     
         closeNavigation: function () {
-            this.navigationMenu.classList.remove('navigation__menu--open');
-            this.navigationLinks.classList.remove('navigation__links--open');
-            this.pageOverlay.classList.remove('page-overlay--active');
+            this.navigationMenu.classList.remove('is-active');
+            this.navigationLinks.classList.remove('is-active');
+            this.pageOverlay.classList.remove('is-active');
         }
     };
     

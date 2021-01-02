@@ -10,16 +10,51 @@ $global-width: 1360px;
 // 2. Colours
 // --------------
 $shakespeare: #4096cf;
+$grey: #f5f5f5;
+
+$header-font-sizes: (
+    'mobile': (
+        'h1': 40px,
+        'h2': 32px,
+        'h3': 22px,
+        'h4': 20px,
+        'h5': 18px,
+        'h6': 16px
+    ),
+    'desktop': (
+        'h1': 56px,
+        'h2': 40px,
+        'h3': 26px,
+        'h4': 23px,
+        'h5': 20px,
+        'h6': 16px
+    )
+    
+);
 
 // 3. Breakpoints
 // --------------
+
+/// A map of breakpoints to be used in media queries
+///
+/// @group Breakpoints
+/// @type Map
 $breakpoints: (
-        small: 0,
-        small-p: 320px,
-        small-l: 480px,
-        medium: 768px,
-        large: 1024px,
-        xlarge: 1200px,
-        xxlarge: 1440px,
-        xxxlarge: 1900px,
+        '': 0,
+        tiny: 320,
+        small: 480,
+        medium: 768,
+        large: 1024,
+        mega: 1440
 );
+
+// 4. Grid
+// --------------
+
+$grid-columns: 12;
+$grid-gutter: 26px;
+
+// 5. Vendor Settings
+// --------------
+
+$fa-font-path: '../fonts/fontawesome';

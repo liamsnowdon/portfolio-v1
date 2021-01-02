@@ -1,0 +1,50 @@
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+
+  &__column {
+    flex: 0 1 20%;
+    padding: 0 20px;
+    margin-bottom: 40px;
+  }
+}
+
+.skill-cont {
+  @media (hover: hover) {
+    transition: transform 0.2s ease-in;
+    
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
+  
+}
+
+.skill {
+  height: 100%;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+  border-radius: 10px;
+  text-align: center;
+
+  &__icon {
+    height: 90px;
+    padding: 10px;
+    font-size: 60px;
+    background-color: $shakespeare;
+    border-radius: 10px 10px 0 0;
+    color: white;
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 90px);
+    padding: 20px;
+
+    h6 {
+      margin: 0;
+    }
+  }
+}

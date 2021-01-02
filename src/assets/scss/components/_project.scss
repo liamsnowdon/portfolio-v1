@@ -1,20 +1,60 @@
 .project {
+  $block: &;
+
   display: flex;
   flex-flow: row wrap;
   margin-left: -16px;
   margin-right: -16px;
   box-sizing: border-box;
+
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  &:nth-child(even) {
+    #{$block}__image {
+      order: 2;
+    }
+
+    #{$block}__heading {
+      justify-content: flex-end;
+    }
+  }
+
+  &__heading {
+    @include breakpoint(medium, down) {
+      display: flex;
+      align-items: center;
+
+      a {
+        flex: 0 1 0;
+      }
+    }
+
+    img {
+      max-height: 50px;
+      margin-left: 20px;
+
+      @include breakpoint(medium) {
+        display: none;
+      }
+    }
+  }
+
   &__image,
   &__text {
-    flex: 0 0 auto;
     padding: 0 16px;
   }
 
   &__image {
-    width: 25%;
+    flex: 0 0 25%;
+
+    @include breakpoint(medium, down) {
+      display: none;
+    }
   }
 
   &__text {
-    width: 75%;
+    flex: 1 0 0;
   }
 }

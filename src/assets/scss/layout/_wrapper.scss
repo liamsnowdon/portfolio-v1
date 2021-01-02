@@ -3,8 +3,26 @@
   width: 100%;
   padding: 40px 20px;
 
-  &--alt {
+  &--main {
+    @include breakpoint(medium) {
+      padding: 100px 20px;
+    }
+  }
+
+  &--blue {
     background: $shakespeare;
-    color: white;
+
+    .l-content h2::after {
+      background: white;
+    }
+    
+    &,
+    a {
+      color: white;
+    }
+  }
+
+  &--grey {
+    background: $grey;
   }
 }

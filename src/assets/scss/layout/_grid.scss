@@ -1,123 +1,33 @@
 .l-grid {
-  display: grid;
-  grid-gap: 30px;
-  grid-template-columns: auto auto;
+  $block: &;
 
-  @include breakpoint(medium) {
-    grid-template-columns: auto auto auto auto;
-    grid-gap: 50px;
-  }
+  width: 100%;
 
-  &__item {
-    position: relative;
+  &__row {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-flow: row wrap;
+    margin-left: -($grid-gutter / 2);
+    margin-right: -($grid-gutter / 2);
 
-    &:hover {
-      .grid__overlay {
-        opacity: 1;
-        visibility: visible;
+    &--row-margin {
+      margin-bottom: $grid-gutter;
+    }
+
+    &--column-margins {
+      #{$block}__column {
+        margin-bottom: $grid-gutter;
       }
     }
   }
 
-  &__overlay {
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    visibility: hidden;
-    background: rgba(0, 0, 0, 0.8);
-    transition: all 0.5s ease-in-out;
+  &__column {
+    flex: 1 1 0px;
+    padding-left: $grid-gutter / 2;
+    padding-right: $grid-gutter / 2;
   }
 }
 
-.row {
-  $block: &;
-
-  display: flex;
-  flex-flow: row wrap;
-  flex: 0 0 auto;
-  margin-left: -16px;
-  margin-right: -16px;
-
-  &--column-margins {
-    #{$block}__column {
-      margin-bottom: 32px;
-    }
-  }
-
-  &__column {
-    flex: 1 1 0;
-    padding-left: 16px;
-    padding-right: 16px;
-    min-width: initial;
-
-    &--1 {
-      flex: 0 0 8.33333%;
-      max-width: 8.33333%; 
-    }
-
-    &--2 {
-      flex: 0 0 16.66667%;
-      max-width: 16.66667%; 
-    }
-
-    &--3 {
-      flex: 0 0 25%;
-      max-width: 25%; 
-    }
-
-    &--4 {
-      flex: 0 0 33.33333%;
-      max-width: 33.33333%; 
-    }
-
-    &--5 {
-      flex: 0 0 41.66667%;
-      max-width: 41.66667%; 
-    }
-
-    &--6 {
-      flex: 0 0 50%;
-      max-width: 50%; 
-    }
-
-    &--7 {
-      flex: 0 0 58.33333%;
-      max-width: 58.33333%; 
-    }
-
-    &--8 {
-      flex: 0 0 66.66667%;
-      max-width: 66.66667%; 
-    }
-
-    &--9 {
-      flex: 0 0 75%;
-      max-width: 75%; 
-    }
-
-    &--10 {
-      flex: 0 0 83.33333%;
-      max-width: 83.33333%; 
-    }
-
-    &--11 {
-      flex: 0 0 91.66667%;
-      max-width: 91.66667%; 
-    }
-
-    &--12 {
-      flex: 0 0 100%;
-      max-width: 100%; 
-    }
-  }
+// Creates the column classes based on breakpoints map
+@each $modifier , $breakpoint in $breakpoints {
+  @include create-col-classes($modifier, $grid-columns, $breakpoint);
 }

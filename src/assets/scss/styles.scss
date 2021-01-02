@@ -1,5 +1,6 @@
 // Abstracts
 @import 'abstracts/variables';
+@import 'abstracts/functions';
 @import 'abstracts/mixins';
 
 // Base
@@ -11,10 +12,11 @@
 
 // Components
 @import 'components/buttons';
-@import 'components/overlay';
-@import 'components/profile-picture';
-@import 'components/project';
 @import 'components/forms';
+@import 'components/overlay';
+@import 'components/profile';
+@import 'components/project';
+@import 'components/skill';
 
 // Layout
 @import 'layout/content';
@@ -22,3 +24,10 @@
 @import 'layout/grid';
 @import 'layout/navigation';
 @import 'layout/wrapper';
+
+// Vendor
+@import 'vendors/fontawesome/fontawesome';
+@import 'vendors/fontawesome/brands';
+//@import 'vendors/fontawesome/v4-shims';
+//@import 'vendors/fontawesome/solid';
+// @import 'vendors/fontawesome/regular';

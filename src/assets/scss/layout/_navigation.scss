@@ -19,19 +19,19 @@
     list-style: none;
     background: $shakespeare;
 
-    @include breakpoint(medium-down) {
+    @include breakpoint(medium, down) {
       flex-direction: column;
       max-height: 0;
       overflow-y: hidden;
       transition: all 0.3s ease-in-out;
-      .l-navigation__links--open & {
+      .l-navigation__links.is-active & {
         max-height: 156px;
       }
     }
   }
 
   &__links {
-    @include breakpoint(medium-down) {
+    @include breakpoint(medium, down) {
       position: absolute;
       top: 60px;
       left: 0;
@@ -79,7 +79,7 @@
       }
     }
 
-    &--open {
+    &.is-active {
       span {
         background: 0;
 
@@ -103,7 +103,7 @@
       padding: 0 10px;
     }
 
-    @include breakpoint(medium-down) {
+    @include breakpoint(medium, down) {
       border-bottom: 1px solid white;
     }
 
