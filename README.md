@@ -16,5 +16,5 @@ npm run serve
 npm run build
 
 # serve via browsersync in production mode
-npm run serveProd
+npm run serve-prod
 ```
