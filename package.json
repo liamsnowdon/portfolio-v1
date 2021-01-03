@@ -4,10 +4,10 @@
   "description": "",
   "private": true,
   "scripts": {
-    "dev": "gulp dev",
-    "build": "gulp dist",
-    "serve": "gulp devServe & gulp watch",
-    "serve-prod": "gulp dist && gulp distServe"
+    "dev": "./node_modules/.bin/gulp dev",
+    "build": "./node_modules/.bin/gulp dist",
+    "serve": "./node_modules/.bin/gulp devServe & ./node_modules/.bin/gulp watch",
+    "serve-prod": "./node_modules/.bin/gulp dist && ./node_modules/.bin/gulp distServe"
   },
   "author": "Liam Snowdon",
   "license": "ISC",
