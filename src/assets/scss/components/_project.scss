@@ -27,7 +27,7 @@
       align-items: center;
 
       a {
-        flex: 0 1 0;
+        flex: 0 1 0px;
       }
     }
 
@@ -55,6 +55,6 @@
   }
 
   &__text {
-    flex: 1 0 0;
+    flex: 1 0 0px;
   }
 }
