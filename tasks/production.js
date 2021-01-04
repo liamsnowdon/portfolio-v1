@@ -60,10 +60,10 @@ export const copyAndMoveFiles = () => {
   const rootFiles = gulp.src('./src/*.{png,xml,ico,svg,webmanifest,html}')
       .pipe(gulp.dest('./dist'));
 
-  const fonts = gulp.src('./src/assets/fonts/**/*.{eot,svg,tff,woff,woff2}')
+  const fonts = gulp.src('./src/assets/fonts/**/*')
       .pipe(gulp.dest('./dist/assets/fonts'));
 
-  const images = gulp.src('./src/assets/images/**/*.{png,jpg,jpeg,gif,svg}')
+  const images = gulp.src('./src/assets/images/**/*')
       .pipe(gulp.dest('./dist/assets/images'));
 
   return merge(rootFiles, fonts, images);  
