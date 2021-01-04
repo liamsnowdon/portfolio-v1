@@ -57,7 +57,7 @@ export const serve = () => {
  * 3. Images
  */
 export const copyAndMoveFiles = () => {
-  const rootFiles = gulp.src('./src/*.{png,xml,ico,svg,webmanifest,html}')
+  const rootFiles = gulp.src(['./src/*.{png,xml,ico,svg,webmanifest,html}', './src/CNAME'])
       .pipe(gulp.dest('./dist'));
 
   const fonts = gulp.src('./src/assets/fonts/**/*')
