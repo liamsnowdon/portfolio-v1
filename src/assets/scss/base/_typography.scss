@@ -65,4 +65,9 @@ p {
 
 a {
   color: $shakespeare;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
