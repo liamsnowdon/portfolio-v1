@@ -63,5 +63,3 @@ export const injectAssets = () => {
 export const watchCss = () => {
   gulp.watch('./src/assets/scss/**/*.scss', css);
 };
-
-export const watch = gulp.series(css, watchCss);

@@ -1,16 +1,24 @@
-.button {
-  display: inline-block;
-  -webkit-appearance: none;
-  cursor: pointer;
-  background: white;
-  border: 1px solid black;
-  border-radius: 0;
-  color: $shakespeare;
-  font-size: 1rem;
-  font-weight: bold;
-  overflow: hidden;
+.c-button {
   position: relative;
+  display: inline-block;
   padding: 10px 20px;
+  border-radius: 5px;
+  background-color: $shakespeare;
+  color: white;
+  -webkit-appearance: none;
+  line-height: normal;
+  font-size: 16px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 600;
+  text-align: center;
   text-decoration: none;
-  transition: background-color .25s ease-out, color .25s ease-out;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+
+  &:hover {
+      @media (hover: hover) {
+          background-color: darken($shakespeare, 10%);
+          text-decoration: none;
+      }
+  }
 }
