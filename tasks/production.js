@@ -9,6 +9,7 @@ import concat from 'gulp-concat';
 import uglify from 'gulp-uglify';
 import inject from 'gulp-inject';
 import merge from 'merge-stream';
+import sitemap from 'gulp-sitemap';
 
 browserSync.create();
 sass.compiler = require('dart-sass');
@@ -105,3 +106,15 @@ export const injectAssets = () => {
   return target.pipe(inject(sources, { ignorePath: 'dist' }))
       .pipe(gulp.dest('./dist'));
 };
+
+export const createSitemap = () => {
+  const sitemapConfig = {
+    siteUrl: 'https://liamsnowdon.uk',
+    images: true,
+    priority: '1.0'
+  };
+
+  return gulp.src('./dist/index.html', { read: false })
+    .pipe(sitemap(sitemapConfig))
+    .pipe(gulp.dest('./dist'));
+}

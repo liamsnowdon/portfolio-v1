@@ -1,0 +1,3 @@
+User-agent: * 
+Disallow:
+Sitemap: https://liamsnowdon.uk/sitemap.xml
