@@ -15,7 +15,7 @@ import revision from 'gulp-rev';
 browserSync.create();
 sass.compiler = require('dart-sass');
 
-const cdnHost = 'https://cdn.jsdelivr.net/gh/liamsnowdon/blog@gh-pages';
+const cdnHost = 'https://cdn.jsdelivr.net/gh/liamsnowdon/portfolio@gh-pages';
 
 /**
  * Plugins to use with PostCSS
