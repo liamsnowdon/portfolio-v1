@@ -10,9 +10,12 @@ import uglify from 'gulp-uglify';
 import inject from 'gulp-inject';
 import merge from 'merge-stream';
 import sitemap from 'gulp-sitemap';
+import revision from 'gulp-rev';
 
 browserSync.create();
 sass.compiler = require('dart-sass');
+
+const cdnHost = 'https://cdn.jsdelivr.net/gh/liamsnowdon/blog@gh-pages';
 
 /**
  * Plugins to use with PostCSS
@@ -80,6 +83,7 @@ export const css = () => {
   return gulp.src('./src/assets/scss/styles.scss')
       .pipe(sass().on('error', sass.logError))
       .pipe(postcss(postcssPlugins))
+      .pipe(revision())
       .pipe(gulp.dest('./dist/assets/css'));
 };
 
@@ -93,6 +97,7 @@ export const js = () => {
   return gulp.src(['./src/assets/third-party/**/*.js', './src/assets/js/core.js'])
       .pipe(concat('main.js'))
       .pipe(uglify().on('error', createErrorHandler('uglify')))
+      .pipe(revision())
       .pipe(gulp.dest('./dist/assets/js'));
 };
 
@@ -101,9 +106,9 @@ export const js = () => {
  */
 export const injectAssets = () => {
   const target = gulp.src('./dist/index.html');
-  const sources = gulp.src(['./dist/assets/js/main.js', './dist/assets/css/styles.css'], {read: false});
+  const sources = gulp.src(['./dist/assets/js/main*.js', './dist/assets/css/styles*.css'], {read: false});
 
-  return target.pipe(inject(sources, { ignorePath: 'dist' }))
+  return target.pipe(inject(sources, { ignorePath: 'dist', addRootSlash: false, addPrefix: cdnHost }))
       .pipe(gulp.dest('./dist'));
 };
 

@@ -61,7 +61,7 @@
         postPodTemplate: '' +
             '<div class="c-post-pod js-post-pod">' +
                 '<a class="c-post-pod__image-cont" href="https://blog.liamsnowdon.uk/posts/<% FILE %>" target="_blank">' +
-                    '<img class="c-post-pod__image" src="https://blog.liamsnowdon.uk<% THUMBNAIL_IMAGE_URL %>" alt="<% TITLE %>" />' +
+                    '<img class="c-post-pod__image" src="https://cdn.jsdelivr.net/gh/liamsnowdon/blog@gh-pages<% THUMBNAIL_IMAGE_URL %>" alt="<% TITLE %>" />' +
                 '</a>' +
                 '<div class="c-post-pod__content">' +
                     '<span class="ws-no-wrap d-block mb-10 fw-700"><% DATE_POSTED %> | ' +
