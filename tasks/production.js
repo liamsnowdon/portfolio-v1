@@ -1,21 +1,18 @@
-import gulp from 'gulp';
-import sass from 'gulp-sass';
-import postcss from 'gulp-postcss';
-import cssnano from 'cssnano';
-import mqPacker from 'css-mqpacker';
-import autoprefixer from 'autoprefixer';
-import browserSync from 'browser-sync';
-import concat from 'gulp-concat';
-import uglify from 'gulp-uglify';
-import inject from 'gulp-inject';
-import merge from 'merge-stream';
-import sitemap from 'gulp-sitemap';
-import revision from 'gulp-rev';
+const gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+const postcss = require('gulp-postcss');
+const cssnano = require('cssnano');
+const mqPacker = require('css-mqpacker');
+const autoprefixer = require('autoprefixer');
+const browserSync = require('browser-sync');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const inject = require('gulp-inject');
+const merge = require('merge-stream');
+const sitemap = require('gulp-sitemap');
+const revision = require('gulp-rev');
 
 browserSync.create();
-sass.compiler = require('dart-sass');
-
-const cdnHost = 'https://cdn.jsdelivr.net/gh/liamsnowdon/portfolio@gh-pages';
 
 /**
  * Plugins to use with PostCSS
@@ -44,7 +41,7 @@ function createErrorHandler(name) {
 /**
  * Serve production via browsersync
  */
-export const serve = () => {
+function serve () {
   browserSync.init({
       server: {
           baseDir: './dist',
@@ -60,8 +57,8 @@ export const serve = () => {
  * 2. Font files (fontawesome)
  * 3. Images
  */
-export const copyAndMoveFiles = () => {
-  const rootFiles = gulp.src(['./src/*.{png,xml,ico,svg,webmanifest,html,txt}', './src/CNAME'])
+function copyAndMoveFiles () {
+  const rootFiles = gulp.src('./src/*.{png,xml,ico,svg,webmanifest,html,txt}')
       .pipe(gulp.dest('./dist'));
 
   const fonts = gulp.src('./src/assets/fonts/**/*')
@@ -79,7 +76,7 @@ export const copyAndMoveFiles = () => {
 * 1. Compile Sass
 * 2. Pass through PostCSS plugins
 */
-export const css = () => {
+function css () {
   return gulp.src('./src/assets/scss/styles.scss')
       .pipe(sass().on('error', sass.logError))
       .pipe(postcss(postcssPlugins))
@@ -93,7 +90,7 @@ export const css = () => {
 * 1. Concatenate third party and core file
 * 2. Minify all JS
 */
-export const js = () => {
+function js () {
   return gulp.src(['./src/assets/third-party/**/*.js', './src/assets/js/core.js'])
       .pipe(concat('main.js'))
       .pipe(uglify().on('error', createErrorHandler('uglify')))
@@ -104,15 +101,15 @@ export const js = () => {
 /**
  * Injects the main javascript and css files into the html
  */
-export const injectAssets = () => {
+function injectAssets () {
   const target = gulp.src('./dist/index.html');
   const sources = gulp.src(['./dist/assets/js/main*.js', './dist/assets/css/styles*.css'], {read: false});
 
-  return target.pipe(inject(sources, { ignorePath: 'dist', addRootSlash: false, addPrefix: cdnHost }))
+  return target.pipe(inject(sources, { ignorePath: 'dist' }))
       .pipe(gulp.dest('./dist'));
 };
 
-export const createSitemap = () => {
+function createSitemap () {
   const sitemapConfig = {
     siteUrl: 'https://liamsnowdon.uk',
     images: true,
@@ -123,3 +120,10 @@ export const createSitemap = () => {
     .pipe(sitemap(sitemapConfig))
     .pipe(gulp.dest('./dist'));
 }
+
+exports.serve = serve;
+exports.copyAndMoveFiles = copyAndMoveFiles;
+exports.css = css;
+exports.js = js;
+exports.injectAssets = injectAssets;
+exports.createSitemap = createSitemap;
