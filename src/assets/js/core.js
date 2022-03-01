@@ -100,14 +100,13 @@
             this.getPosts()
                 .then(function () {
                     self.render();
-                    self.applyScrollReveal();
                 });
         },
 
         getPosts: function () {
             var self = this;
 
-            return fetch('https://blog.liamsnowdon.uk/data/portfolio-recent-posts.json')
+            return fetch('https://blog.liamsnowdon.uk/data/recent-posts.json')
                 .then(function(response) {
                     if (!response.ok) {
                         throw Error(response.statusText);
@@ -169,19 +168,12 @@
 
             return html;
         },
-        
-        /**
-         * @todo This breaks scroll reveal animation for profile for some reason. Commenting out for now
-         */
-        applyScrollReveal: function () {
-            // ScrollReveal().reveal('.js-post-pod', { interval: 200 });
-        }
     };
     
     Navigation.initialise();
-    // RecentPosts.initialise();
+    RecentPosts.initialise();
 
     window.Portfolio = window.Portfolio || {};
-    // window.Portfolio.RecentPosts = RecentPosts;
+    window.Portfolio.RecentPosts = RecentPosts;
     window.Portfolio.Navigation = Navigation;
 })();
