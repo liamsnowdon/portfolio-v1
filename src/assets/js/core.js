@@ -60,12 +60,12 @@
     var RecentPosts = {
         postPodTemplate: '' +
             '<div class="c-post-pod js-post-pod">' +
-                '<a class="c-post-pod__image-cont" href="https://blog.liamsnowdon.uk/posts/<% FILE %>" target="_blank">' +
-                    '<img class="c-post-pod__image" src="https://blog.liamsnowdon.uk/assets/<% THUMBNAIL_IMAGE_URL %>" alt="<% TITLE %>" />' +
+                '<a class="c-post-pod__image-cont" href="https://blog.liamsnowdon.uk/posts/<% SLUG %>" target="_blank">' +
+                    '<img class="c-post-pod__image" src="https://blog.liamsnowdon.uk<% THUMBNAIL_IMAGE_URL %>" alt="<% TITLE %>" />' +
                 '</a>' +
                 '<div class="c-post-pod__content">' +
-                    '<span class="ws-no-wrap d-block mb-10 fw-700"><% DATE_POSTED %> | ' +
-                        '<a class="c-post-pod__category" href="https://blog.liamsnowdon.uk/categories/<% CATEGORY_FILE %>" target="_blank"><% CATEGORY_NAME %></a>' +
+                    '<span class="ws-no-wrap d-block mb-10 fw-700"><% POSTED_AT %> | ' +
+                        '<a class="c-post-pod__category" href="https://blog.liamsnowdon.uk/categories/<% CATEGORY %>" target="_blank"><% CATEGORY %></a>' +
                     '</span>' +
                     
                     '<h6 class="c-post-pod__title"><% TITLE %></h6>' +
@@ -74,7 +74,7 @@
                     '<div class="c-post-pod__button-holder">' +
                         '<% TAGS %>' +
 
-                        '<a class="c-button c-post-pod__button" href="https://blog.liamsnowdon.uk/posts/<% FILE %>" target="_blank">Go to post</a>' +
+                        '<a class="c-button c-post-pod__button" href="https://blog.liamsnowdon.uk/posts/<% SLUG %>" target="_blank">Go to post</a>' +
                     '</div>' +
                 '</div>' +
             '</div>',
@@ -140,17 +140,22 @@
             });        
         },
 
+        dateString: function (date) {
+            var date = new Date(date)
+
+            return date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear();
+        },
+
         buildPodHtml: function (post) {
             var self = this;        
             var tagsHtml = '';
             var html = this.postPodTemplate
                 .replace('<% THUMBNAIL_IMAGE_URL %>', post.thumbnailImageUrl)
                 .replace(/<% TITLE %>/g, post.title)
-                .replace('<% DATE_POSTED %>', post.datePosted)
-                .replace(/<% CATEGORY_FILE %>/g, post.category.file)
-                .replace('<% CATEGORY_NAME %>', post.category.name)
+                .replace('<% POSTED_AT %>', self.dateString(post.postedAt))
+                .replace(/<% CATEGORY %>/g, post.category)
                 .replace('<% INTRO %>', post.intro)
-                .replace(/<% FILE %>/g, post.file);
+                .replace(/<% SLUG %>/g, post.slug);
 
             if (post.tags.length) {
                 html = html.replace('<% TAGS %>', this.tagsTemplate);
@@ -160,8 +165,8 @@
 
             post.tags.forEach(function (tag) {
                 tagsHtml += self.tagTemplate
-                    .replace('<% FILE %>', tag.file)
-                    .replace('<% NAME %>', tag.name.toLowerCase());
+                    .replace('<% FILE %>', tag)
+                    .replace('<% NAME %>', tag);
             });
 
             html = html.replace('<% TAGS %>', tagsHtml);
